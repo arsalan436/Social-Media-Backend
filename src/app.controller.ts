@@ -13,7 +13,7 @@ export class AppController {
 
    @Get('protected')
   @UseGuards(AuthGuard('jwt'))
-  getProtected(@Request() req) {
+  getProtected(@Request() req: Request & { user: any }) {
     return {
       message: 'This is a protected route!',
       user: req.user, // contains { userId, email }

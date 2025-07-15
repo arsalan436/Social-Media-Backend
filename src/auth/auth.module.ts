@@ -5,7 +5,7 @@ import { JwtModule } from '@nestjs/jwt';
 import { PassportModule } from '@nestjs/passport';
 import { JwtStrategy } from './strategies/jwt.strategy';
 import { MongooseModule } from '@nestjs/mongoose';
-import { User, UserSchema } from './schemas/user.schema';
+import { User, UserSchema } from '../users/schemas/user.schema';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { DEFAULT_JWT_EXPIRES_IN } from 'src/common/constants/jwt.contants';
 
